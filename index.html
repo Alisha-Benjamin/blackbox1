@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Social Media Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#photo-feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.photo {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: calc(33.333% - 20px);
+}
+
+.photo img {
+  width: 100%;
+}
+
+.like-button {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+}
+
+.like-button:hover {
+  background-color: #f0f0f0;
+}
+
+.like-button i {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.2s ease-in-out;
+}
+
+.like-button.liked i {
+  color: red;
+}
+
+.like-counter {
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Social Media Page</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="photo-feed">
+        <h2>Photo Feed</h2>
+        <div class="photo">
+          <img src="photo1.jpg" alt="Photo 1">
+          <button class="like-button" onclick="likePhoto(this)">Like</button>
+          <span class="like-counter">0</span>
+          <button class="share-button">Share</button>
+          <div class="comments">
+            <h3>Comments</h3>
+            <ul>
+              <li>Comment 1</li>
+              <li>Comment 2</li>
+              <li>Comment 3</li>
+            </ul>
+            <form>
+              <input type="text" placeholder="Add a comment...">
+              <button type="submit">Post</button>
+            </form>
+          </div>
+        </div>
+        <!-- More photos here -->
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Social Media Page. All rights reserved.</p>
+      <ul>
+        <li><a href="https://twitter.com">Twitter</a></li>
+        <li><a href="https://instagram.com">Instagram</a></li>
+      </ul>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
